@@ -1,0 +1,40 @@
+Update started at Tue Apr 06 11:21:40 EST 2010
+
+Version: 59
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.InsertEmailTemplate
+Execute timestamp: Tue Apr 06 11:21:44 EST 2010
+
+Version: 60
+Release: 2
+Rows updated: 0
+Executed: CREATE TABLE commission_export (commission_export_oid bigint NOT NULL IDENTITY (1, 1), created_timestamp datetime NOT NULL, endDate datetime NULL, sequence_number varchar(20) NULL, startDate datetime NULL, PRIMARY KEY (commission_export_oid))
+Execute timestamp: Tue Apr 06 11:21:45 EST 2010
+
+Version: 61
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Tue Apr 06 11:21:45 EST 2010
+
+Version: 62
+Release: 2
+Rows updated: 1
+Executed: UPDATE email_template SET template_body =    '<p>The following transaction has been processed on ALL-4-BIZ Loyalt Bonus.</p> <blockquote><table><tr><td><li>Account Number:</li></td><td>$all4bizAccountNo</td></tr> <tr><td><li>Transaction Date:</li></td><td>$timestamp</td></tr> <tr><td><li>Sales Channel:</li></td><td>$merchantName</td></tr> <tr><td><li>Transaction:</li></td><td>$descriptorsCsv $description</td></tr> </table></blockquote> <p>regards,<br/>Telstra All4Biz</p>'   WHERE category = 'Loyalty Bonus Processed-Dealer'
+Execute timestamp: Tue Apr 06 11:21:45 EST 2010
+
+Version: 63
+Release: 2
+Rows updated: 1
+Executed: UPDATE email_template SET template_body =    '<p>The following transaction has been processed on ALL-4-BIZ Loyalty Bonus.</p> <blockquote><table><tr><td><li>Account Number:</li></td><td>$all4bizAccountNo</td></tr> <tr><td><li>Refunded Transaction ID:</li></td><td>$transactionReference</td></tr> <tr><td><li>Transaction Date:</li></td><td>$timestamp</td></tr> <tr><td><li>Sales Channel:</li></td><td>$merchantName</td></tr> <tr><td><li>Transaction:</li></td><td>$descriptorsCsv $description</td></tr> </table></blockquote> <p>regards,<br/>Telstra All4Biz</p>'   WHERE category = 'Loyalty Bonus Refund Processed-Dealer'
+Execute timestamp: Tue Apr 06 11:21:45 EST 2010
+
+Version: 64
+Release: 2
+Rows updated: 0
+Executed: CREATE TABLE amortisation (amortisation_oid bigint NOT NULL IDENTITY (1, 1),     amount decimal(16, 2) NOT NULL, customer_oid bigint NOT NULL, date datetime NOT NULL, PRIMARY KEY (amortisation_oid))
+Execute timestamp: Tue Apr 06 11:21:45 EST 2010
+
+Update completed successfully.
+6 changes were applied to the database.

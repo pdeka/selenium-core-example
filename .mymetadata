@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="telstra.all4biz.portal"
+  id="myeclipse.1231285087398"
+  context-root="/telstra.all4biz.portal"
+  j2ee-spec="1.4"
+  archive="telstra.all4biz.portal.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

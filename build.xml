@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+
+<project name="all4biz" default="all" basedir=".">
+
+    <property file="${basedir}/build.${env}.properties"/>
+
+    <property name="utilities.java.classes" value="${basedir}/build/utilities-java-classes"/>
+
+    <property name="selenium.output.dir" value="${basedir}/output/selenium"/>
+    <property name="unit.test.output.dir" value="${basedir}/output/unit-tests"/>
+    <property name="test.coverage.dir" value="${basedir}/output/tests-coverage"/>
+    <property name="output.dir" value="${basedir}/output"/>
+    <property name="build.compile.debug" value="true"/>
+    <property name="build.compile.deprecation" value="false"/>
+    <property name="src.dir" value="src"/>
+    <property name="src.main" value="${src.dir}"/>
+    <property name="docs.dir" value="docs"/>
+    <property name="src.web" value="WebRoot"/>
+    <property name="src.test.java" value="junit"/>
+    <property name="src.test.web" value="functional-tests"/>
+    <property name="src.test.web.development" value="functional-tests/tests/development"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="lib.build" value="${lib.dir}/build"/>
+    <property name="lib.main" value="${lib.dir}/source"/>
+    <property name="lib.test" value="${lib.dir}/test"/>
+    <property name="build.dir" value="build"/>
+    <property name="build.web.dir" value="${build.dir}/web"/>
+    <property name="build.web.package" value="${build.web.dir}/all4biz.war"/>
+    <property name="selenium.tests.web.package" value="${build.web.dir}/selenium-tests.war"/>
+    <property name="test.dir" value="build/test"/>
+    <property name="test.java.classes" value="${test.dir}/java-classes"/>
+    <property name="gen.test.web" value="${test.dir}/web"/>
+    <property name="ruby.selenium.tests.dir" value="${test.dir}/web/ruby-selenium-tests"/>
+    <property name="server.url" value="http://${server-name}:${server.port}"/>
+    <property name="webapp.url" value="${server.url}/all4biz/"/>
+    <property name="firefox.exe.location" value="${firefox-exe-location}"/>
+    <property name="firefox.profile.name" value="${firefox-profile-name}"/>
+    <property name="selenium.url" value="${server.url}/selenium"/>
+    <property name="tomcat.home" value="${basedir}/apache-tomcat-6.0.24"/>
+    <property name="all4biz.deploy.dir" value="${build.dir}/deploy/all4biz"/>
+    <property name="selenium-tests.deploy.dir" value="${build.dir}/deploy/selenium-tests"/>
+    <property name="build.deploy.classes" value="${all4biz.deploy.dir}/WEB-INF/classes"/>
+    <property name="build.uninstrumented.classes" value="${build.dir}/uninstrumented"/>
+    <property name="build.instrumented.classes" value="${build.dir}/instrumented"/>
+
+
+    <path id="build.class.path">
+        <fileset dir="${lib.main}" includes="**/*.jar"/>
+        <fileset dir="${lib.build}" includes="**/*.jar"/>
+    </path>
+
+    <path id="project.class.path">
+        <pathelement path="${build.deploy.classes}"/>
+        <fileset dir="${lib.main}" includes="**/*.jar"/>
+        <fileset dir="${lib.dir}/compile">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${src.web}/WEB-INF/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="test.class.path">
+        <!--<pathelement location="${build.instrumented.classes}"/>-->
+        <pathelement location="${build.deploy.classes}"/>
+        <pathelement location="${test.java.classes}"/>
+        <pathelement location="${src.web}"/>
+        <pathelement location="${src.web}/WEB-INF/classes"/>
+        <pathelement location="${src.dir}/properties"/>
+        <pathelement location="test/data"/>
+        <fileset dir="${lib.test}" includes="**/*.jar"/>
+        <path refid="project.class.path"/>
+        <path refid="build.class.path"/>
+    </path>
+
+    <path id="cayenne.build.classpath">
+        <fileset dir="${src.web}/WEB-INF/lib">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${lib.build}/cayenne-ant">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${lib.build}/sqldriver">
+            <include name="sqljdbc.jar"/>
+        </fileset>
+    </path>
+
+
+    <path id="utilities.compile.classpath">
+        <pathelement location="${utilities.java.classes}"/>
+        <fileset dir="vendor/selenium" includes="**/*.jar"/>
+        <path refid="cayenne.build.classpath"/>
+    </path>
+
+    <path id="utilities.class.path">
+        <pathelement location="${utilities.java.classes}"/>
+        <fileset dir="vendor/selenium" includes="**/*.jar"/>
+        <pathelement location="${build.deploy.classes}"/>
+        <path refid="cayenne.build.classpath"/>
+    </path>
+
+    <path id="cobertura.classpath">
+        <fileset dir="${lib.build}/cobertura-1.9">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <taskdef classpathref="cobertura.classpath" resource="tasks.properties">
+        <classpath>
+            <fileset dir="${lib.build}/cobertura-1.9" includes="**/*.jar"/>
+        </classpath>
+    </taskdef>
+
+    <!-- Top level targets -->
+    <target name="all"
+            depends="check-tomcat-is-running, clean, init, build-all, initialize-db, run-unit-tests,
+            utilities-compile, generate-deploy-tests, run-functional-tests, create-coverage-report"
+            description="Main target which builds everything and runs all tests"/>
+
+    <!--<target name="3-build-all" depends="init, build-all4biz, 5-build-tests, utilities-compile"-->
+    <!--description="Build everything but do not want to run any tests"/>-->
+
+    <target name="build-all" description="Build everything but do not want to run any tests"/>
+
+    <target name="generate-deploy-tests" depends="init, generate-functional-tests"
+            description="Build and deploy selenium tests">
+        <copy todir="${tomcat.home}/webapps/selenium-tests">
+            <fileset dir="${gen.test.web}" includes="**/*.html"/>
+        </copy>
+    </target>
+
+    <target name="run-functional-tests"
+            depends="start-tomcat,  run-selenium-tests, stop-tomcat"/>
+
+    <target name="hotdeploy-resources" description="Hot deploy all resources and properties">
+        <copy todir="${all4biz.deploy.dir}">
+            <fileset dir="${src.web}">
+                <exclude name="**/*.war"/>
+                <exclude name="**/*formcenterMap.map.xml"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.deploy.classes}">
+            <fileset dir="${basedir}/config">
+                <include name="*.xml"/>
+                <include name="*.properties"/>
+                <exclude name="**/*formcenterMap.map.xml"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${build.deploy.classes}" filtering="true" overwrite="true">
+            <fileset dir="config/development">
+                <include name="*.xml"/>
+            </fileset>
+            <filterset filtersfile="build.${env}.properties"/>
+        </copy>
+        <copy todir="${all4biz.deploy.dir}" overwrite="true">
+            <fileset dir="${docs.dir}/test/template">
+                <include name="*.xml"/>
+            </fileset>
+            <fileset dir="${docs.dir}/test/sql">
+                <include name="*.sql"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="instrument-code" if="instrument">
+
+        <echo message="Please note that your code has been Instrumented!!"/>
+
+        <delete file="cobertura.ser"/>
+
+        <cobertura-instrument todir="${build.instrumented.classes}">
+            <fileset dir="${build.uninstrumented.classes}">
+                <include name="**/*.class"/>
+                <exclude name="springext/**/*.class"/>
+                <exclude name="org/acegisecurity/**/*.class"/>
+                <exclude name="**/selenium/**/*.class"/>
+            </fileset>
+        </cobertura-instrument>
+
+        <copy todir="${build.deploy.classes}">
+            <fileset dir="${build.uninstrumented.classes}">
+                <include name="**/*.class"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${build.deploy.classes}" overwrite="true">
+            <fileset dir="${build.instrumented.classes}">
+                <include name="**/*.class"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${all4biz.deploy.dir}/WEB-INF/lib" overwrite="true"
+              file="${lib.build}/cobertura-1.9/cobertura.jar"/>
+
+    </target>
+
+    <target name="copy-uninstrumented-code" unless="instrument">
+        <echo message="Please note that your you are working with uninstrumented code!"/>
+        <copy todir="${build.deploy.classes}" overwrite="true">
+            <fileset dir="${build.uninstrumented.classes}">
+                <include name="**/*.class"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="build-main-classes">
+        <compile classpathref="project.class.path" src="${src.main}" destDir="${build.uninstrumented.classes}"/>
+    </target>
+
+    <target name="build-all4biz"/>
+    <!--<target name="build-all4biz"-->
+    <!--depends="init, hotdeploy-resources, build-main-classes, instrument-code, copy-uninstrumented-code">-->
+
+    <!--<copy todir="${build.deploy.classes}">-->
+    <!--<fileset dir="${src.dir}">-->
+    <!--<exclude name="**/*.java"/>-->
+    <!--</fileset>-->
+    <!--</copy>-->
+    <!--</target>-->
+    <!-- Top level targets -->
+
+    <target name="clean" depends="clean-output">
+        <delete dir="${build.dir}"/>
+        <delete dir="${tomcat.home}/webapps/selenium"/>
+        <delete dir="${tomcat.home}/webapps/selenium-tests"/>
+        <delete dir="${tomcat.home}/work/Catalina/localhost"/>
+    </target>
+
+    <target name="clean-output">
+        <delete dir="${output.dir}/dist"/>
+        <delete dir="${output.dir}/selenium"/>
+        <delete dir="${output.dir}/unit-tests"/>
+        <delete dir="${test.coverage.dir}"/>
+    </target>
+
+    <target name="init">
+        <mkdir dir="${basedir}/output"/>
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.deploy.classes}"/>
+        <mkdir dir="${build.uninstrumented.classes}"/>
+        <mkdir dir="${build.instrumented.classes}"/>
+        <mkdir dir="${build.web.dir}"/>
+        <mkdir dir="${all4biz.deploy.dir}"/>
+        <mkdir dir="${selenium-tests.deploy.dir}"/>
+
+        <mkdir dir="${test.dir}"/>
+        <mkdir dir="${test.java.classes}"/>
+        <mkdir dir="${gen.test.web}"/>
+        <mkdir dir="${ruby.selenium.tests.dir}"/>
+
+        <mkdir dir="${selenium.output.dir}"/>
+        <mkdir dir="${unit.test.output.dir}"/>
+        <mkdir dir="${test.coverage.dir}"/>
+
+        <mkdir dir="${utilities.java.classes}"/>
+    </target>
+
+    <target name="test-java-compile" depends="build-all4biz">
+        <compile classpathref="test.class.path" src="${src.test.java}" destDir="${test.java.classes}"/>
+        <copy todir="${test.java.classes}">
+            <fileset dir="${src.test.java}">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="utilities-compile" depends="build-all4biz">
+        <compile classpathref="utilities.compile.classpath" src="${basedir}/vendor/utilities"
+                 destDir="${utilities.java.classes}"/>
+    </target>
+
+    <!--<target name="run-unit-tests" depends="3-build-all, test-java-compile, test-java-run"/>-->
+    <target name="run-unit-tests"/>
+
+    <target name="test-java-run">
+        <junit fork="true" forkmode="once"
+               printsummary="withOutAndErr" haltonfailure="yes" maxmemory="1024m">
+            <jvmarg value="-XX:MaxPermSize=100m"/>
+            <sysproperty key="net.sourceforge.cobertura.datafile" file="cobertura.ser"/>
+            <classpath refid="test.class.path"/>
+            <formatter type="xml" usefile="true"/>
+            <formatter type="brief" usefile="false"/>
+
+            <batchtest todir="${unit.test.output.dir}" haltonfailure="true">
+                <fileset dir="${src.test.java}">
+                    <include name="**/*Test.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <!--<target name="create-coverage-report" depends="init" if="instrument">-->
+    <!--<cobertura-report format="xml" datafile="cobertura.ser" destdir="${test.coverage.dir}" srcdir="${src.main}"/>-->
+    <!--</target>-->
+    <target name="create-coverage-report" depends="init" if="instrument">
+        <cobertura-report format="xml" datafile="cobertura.ser" destdir="${test.coverage.dir}" srcdir="${src.main}"/>
+    </target>
+
+    <target name="check-tomcat-is-running">
+        <echo>Server port ${server.port}</echo>
+        <waitfor maxwait="100" maxwaitunit="millisecond" timeoutproperty="tomcat.stopped">
+            <http url="http://localhost:${server.port}/all4biz/"/>
+        </waitfor>
+
+        <fail unless="tomcat.stopped">Tomcat is already running.</fail>
+    </target>
+
+    <target name="generate-functional-tests" depends="init">
+        <generate-selenium-test-suite>
+            <tests>
+                <fileset dir="${src.test.web.development}"/>
+            </tests>
+        </generate-selenium-test-suite>
+    </target>
+
+    <macrodef name="generate-selenium-test-suite">
+        <element name="tests"/>
+        <sequential>
+            <delete>
+                <fileset dir="${ruby.selenium.tests.dir}" includes="*.test"/>
+            </delete>
+            <copy todir="${ruby.selenium.tests.dir}">
+                <tests/>
+            </copy>
+            <exec dir="${src.test.web}" executable="ruby">
+                <arg line="generate_all_tests.rb"/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+    <target name="start-tomcat" depends="init">
+        <parallel timeout="120000">
+            <daemons>
+                <tomcat-launcher/>
+            </daemons>
+        </parallel>
+        <sleep seconds="20"/>
+    </target>
+
+    <target name="stop-tomcat">
+        <tomcat-killer/>
+    </target>
+
+    <target name="run-selenium-tests">
+        <delete file="${selenium.output.dir}/selenium-results.html"/>
+        <java classname="com.avoka.selenium.runner.AvokaSeleniumRunner" fork="true" failonerror="true">
+            <classpath refid="utilities.class.path"/>
+            <sysproperty key="test.selenium.log.dir" value="${selenium.output.dir}"/>
+            <sysproperty key="test.selenium.results" value="${selenium.url}/postResults"/>
+            <sysproperty key="test.selenium.browser" value="firefox-chrome"/>
+            <sysproperty key="test.firefox.exe.location" value="${firefox.exe.location}"/>
+            <!--<sysproperty key="test.firefox.profile.name" value="${firefox.profile.name}"/>-->
+            <sysproperty key="test.selenium.runner"
+                         value="${selenium.url}/TestRunner.html?test=/selenium-tests/TestSuite.html&amp;auto=true&amp;resultsUrl=${selenium.url}/postResults"/>
+            <sysproperty key="test.selenium.browser.visible" value="true"/>
+            <sysproperty key="test.selenium.maximum.poll.attempts" value="600"/>
+            <sysproperty key="java.library.path" value="vendor/selenium"/>
+        </java>
+
+    </target>
+
+    <!--
+     <property name="utilities.class.path" refid="utilities.class.path"/>
+     <target name="refresh-db" depends="utilities-compile,2-hotdeploy-resources">
+         <echo>Classpath: ${utilities.class.path}</echo>
+         <java classname="com.avoka.all4biz.db.RefreshDatabase" fork="false" failonerror="true">
+             <classpath refid="utilities.class.path"/>
+         </java>
+     </target>
+     -->
+
+    <target name="initialize-db"
+            description="Initialize all4biz database">
+    </target>
+    <!--<target name="6-refresh-initialize-db" depends="utilities-compile,2-hotdeploy-resources"-->
+    <!--description="Initialize all4biz database">-->
+    <!--<sql userid="${all4biz-user}"-->
+    <!--password="${all4biz-pwd}"-->
+    <!--url="jdbc:sqlserver://localhost:1433;DatabaseName=all4biz"-->
+    <!--driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"-->
+    <!--classpathref="utilities.class.path"-->
+    <!--delimitertype="row"-->
+    <!--keepformat="yes">-->
+    <!--<transaction src="${docs.dir}/release1/create-all4biz-tables.sql"/>-->
+    <!--<transaction src="${docs.dir}/release1/create-auto-pk-procedure.sql"/>-->
+    <!--<transaction src="${docs.dir}/release2/undo-db-version-changes.sql"/>-->
+    <!--<transaction src="${docs.dir}/release2/create-db-version-table.sql"/>-->
+    <!--<transaction src="${docs.dir}/initialise.sql"/>-->
+    <!--<transaction src="${docs.dir}/initialise-email-templates.sql"/>-->
+    <!--<transaction src="${docs.dir}/initialise-workorder-instructions.sql"/>-->
+    <!--<transaction src="${docs.dir}/release2/authorisationCode-Generation.sql"/>-->
+    <!--<transaction src="${docs.dir}/release2/authorisationCode-Generation1.sql"/>-->
+    <!--<transaction src="${docs.dir}/release2/authorisationCode-Generation2.sql"/>-->
+    <!--<transaction src="${docs.dir}/release2/authorisationCode-Generation3.sql"/>-->
+    <!--<transaction src="${docs.dir}/release2/authorisationCode-Generation4.sql"/>-->
+    <!--<transaction src="${docs.dir}/release2/authorisationCode-Generation5.sql"/>-->
+    <!--</sql>-->
+    <!--</target>-->
+
+    <macrodef name="tomcat-launcher">
+        <sequential>
+            <java jar="${basedir}/apache-tomcat-6.0.24/bin/bootstrap.jar" failonerror="true" fork="true">
+                <sysproperty key="log4j.configuration" value="log4j.xml"/>
+                <sysproperty key="net.sourceforge.cobertura.datafile" file="cobertura.ser"/>
+                <jvmarg value="-Dnet.sourceforge.cobertura.datafile=cobertura.ser"/>
+                <jvmarg value="-Dcatalina.home=${tomcat.home}"/>
+                <jvmarg value="-Dcatalina.base=${tomcat.home}"/>
+                <jvmarg value="-ea"/>
+                <jvmarg value="-Xms256m"/>
+                <jvmarg value="-Xmx512m"/>
+            </java>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="tomcat-killer">
+        <sequential>
+            <echo message="Stopping Tomcat..."/>
+            <java jar="${basedir}/apache-tomcat-6.0.24/bin/bootstrap.jar" failonerror="true" fork="true">
+                <jvmarg value="-Dcatalina.home=${tomcat.home}"/>
+                <arg line="stop"/>
+            </java>
+
+            <!--
+                    Sleep for 10 seconds before running Cobertura report, to provide JVM time
+                    to properly write data to the 'cobertura.ser' file
+                -->
+            <sleep seconds="10"/>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="compile">
+        <attribute name="src"/>
+        <attribute name="classpathref"/>
+        <attribute name="destDir"/>
+        <sequential>
+            <javac srcdir="@{src}"
+                   classpathref="@{classpathref}"
+                   destdir="@{destDir}"
+                   debug="${build.compile.debug}"
+                   deprecation="${build.compile.deprecation}"
+                   source="1.5"/>
+        </sequential>
+    </macrodef>
+
+    <!--<target name="jar-selenium" description="creating the selenium core war after the hack">-->
+    <!--<jar destfile="${basedir}/vendor/selenium/selenium.war">-->
+    <!--<zipfileset dir="${basedir}/vendor/selenium/selenium-hack">-->
+    <!--<include name="**/*"/>-->
+    <!--</zipfileset>-->
+    <!--</jar>-->
+    <!--</target>-->
+
+</project>

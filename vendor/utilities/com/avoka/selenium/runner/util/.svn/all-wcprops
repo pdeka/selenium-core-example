@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Clients/!svn/ver/3946/Telstra/All-4-Biz/trunk/telstra.all4biz.portal/vendor/utilities/com/avoka/selenium/runner/util
+END
+ResultWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/Clients/!svn/ver/3946/Telstra/All-4-Biz/trunk/telstra.all4biz.portal/vendor/utilities/com/avoka/selenium/runner/util/ResultWriter.java
+END
+SeleniumRunnerConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/Clients/!svn/ver/3946/Telstra/All-4-Biz/trunk/telstra.all4biz.portal/vendor/utilities/com/avoka/selenium/runner/util/SeleniumRunnerConfig.java
+END
+ResponseEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/Clients/!svn/ver/3946/Telstra/All-4-Biz/trunk/telstra.all4biz.portal/vendor/utilities/com/avoka/selenium/runner/util/ResponseEvaluator.java
+END
+UrlPoller.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/Clients/!svn/ver/3946/Telstra/All-4-Biz/trunk/telstra.all4biz.portal/vendor/utilities/com/avoka/selenium/runner/util/UrlPoller.java
+END
+SeleniumPoller.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/Clients/!svn/ver/3946/Telstra/All-4-Biz/trunk/telstra.all4biz.portal/vendor/utilities/com/avoka/selenium/runner/util/SeleniumPoller.java
+END
+SeleniumInitializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/Clients/!svn/ver/3946/Telstra/All-4-Biz/trunk/telstra.all4biz.portal/vendor/utilities/com/avoka/selenium/runner/util/SeleniumInitializer.java
+END

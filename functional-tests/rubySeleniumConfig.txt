@@ -1,0 +1,47 @@
+# These configurations are only used when running locally on your machine
+# and don't apply for running on a remote server in automated test mode.
+
+# GENERATE_LOCATION
+# This sets the location that rubySelenium will generate the html.
+# set it with the full path to the folder you want the tests to be generated into.
+# e.g. C:/IBM/workspaces/SecureMessaging1/FunctionalTests/WebContent/tests/Ruby
+
+GENERATE_LOCATION = ../build/test/web
+
+# TEST_LOCATION
+# This sets the location that rubySelenium should look for when running
+# the tests locally. It should point to the url of where the tests live on
+# your local server.
+#
+# e.g. if you navigate to
+# http://localhost:9081/Selenium/tests/Ruby/tests/seleniumTestRunner.html
+# to find your tests then you should set this property to
+# http://localhost:9081/Selenium/tests/Ruby
+
+TEST_LOCATION = http://usr-ppandya2:8080/selenium-tests
+
+# LOGGING
+# This turns the log output on or off when using the generate command.
+# When you run the generate command all the html is generated - this is
+# for use when hooked up to the remote cruisecontrol driven automation.
+# The logs show all the ruby code that is executed in order to create the html.
+#
+# set it to true or false to turn it on or off
+
+LOGGING = false
+
+# IE_LOCATION
+# This is the location of your Internet Explorer executable (iexplore.exe)
+
+IE_LOCATION = C:/Program Files/Internet Explorer/IEXPLORE.EXE
+
+# FF_LOCATION
+# This is the location of your Firefox executable (firefox.exe)
+
+FF_LOCATION = C:/Program Files/Mozilla Firefox/firefox.exe
+
+# LOCAL_TEST_RESULTS
+# After a test has run locally it will dump out the results to the testResults
+# directory. You can turn this on or off here by setting it to either true or false.
+
+LOCAL_TEST_RESULTS = true

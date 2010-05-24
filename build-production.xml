@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+<project name="all4biz-production" default="build-production" basedir=".">
+
+    <property name="build.compile.debug" value="true"/>
+    <property name="build.compile.deprecation" value="false"/>
+
+	<property environment="env"/>
+	<property name="Hudson.Build.Number" value="${env.BUILD_NUMBER}"/>
+	<property name="Subversion.Build.Number" value="${env.SVN_REVISION}"/>
+	
+	
+    <property name="src.main" value="src"/>
+    <property name="src.web" value="WebRoot"/>
+
+    <property name="lib.dir" value="lib"/>
+    <property name="lib.build" value="${lib.dir}/build"/>
+    <property name="lib.main" value="${lib.dir}/source"/>
+
+    <property name="build.dir" value="build/production"/>
+    <property name="build.main.classes" value="${build.dir}/classes"/>
+    <property name="build.main.webroot" value="${build.dir}/webroot"/>
+    <property name="build.web.dir" value="${build.dir}/web"/>
+    <property name="build.web.package" value="${build.web.dir}/all4biz.war"/>
+
+    <path id="build.class.path">
+        <fileset dir="${lib.main}" includes="**/*.jar"/>
+        <fileset dir="${lib.build}" includes="**/*.jar"/>
+    </path>
+
+    <path id="project.class.path">
+        <pathelement path="${build.main.classes}"/>
+        <fileset dir="${lib.main}" includes="**/*.jar"/>
+        <fileset dir="${lib.dir}/compile">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${src.web}/WEB-INF/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <property name="dist.dir" value="${basedir}/output/dist" />
+
+	<target name="get-todays-date">
+		<tstamp>
+			<format property="todaysDate" pattern="yyyyMMdd" />
+		</tstamp>
+		<echo message="today's date is: ">${todaysDate}</echo>
+	</target>
+	<target name="update-version-label" depends="get-todays-date">
+		
+		<property name="version.label" value="Version 1 Build #${Hudson.Build.Number}-${Subversion.Build.Number} ${todaysDate}" />
+		<echo message="All4Biz build number updated to: ">${version.label}</echo>
+
+		<echo message="Updating border-template.htm Page With ${version.label}" />
+		<copy todir="${build.web.dir}" encoding="UTF-8">
+			<fileset file="${src.web}/border-template.htm" />
+			<filterset begintoken="%!" endtoken="!%">
+				<filter token="All4BizBuildNumber" value="${version.label}" />
+			</filterset>
+		</copy>
+	</target>
+	
+	
+    <target name="dist-copy-production">
+        <copy todir="${dist.dir}" file="${build.web.package}" />
+    </target>
+
+    <target name="build-production" depends="clean-production,build-init-production, build-main-production, dist-package-production, dist-copy-production"
+            description="Create war for production deployment"/>
+
+    <target name="clean-production" description="Cleans the build, summary and log output directories">
+        <delete quiet="yes" dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <target name="build-init-production">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.main.classes}"/>
+        <mkdir dir="${build.main.webroot}"/>
+        <mkdir dir="${build.web.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <macrodef name="compile">
+        <attribute name="src"/>
+        <attribute name="classpathref"/>
+        <attribute name="destDir"/>
+        <sequential>
+            <javac srcdir="@{src}"
+                   classpathref="@{classpathref}"
+                   destdir="@{destDir}"
+                   debug="${build.compile.debug}"
+                   deprecation="${build.compile.deprecation}"
+                   source="1.5"/>
+        </sequential>
+    </macrodef>
+
+    <target name="build-main-production" depends="build-init-production">
+        <compile classpathref="project.class.path" src="${src.main}" destDir="${build.main.classes}"/>
+        <copy todir="${build.main.classes}">
+            <fileset dir="${src.main}">
+                <exclude name="**/*.java"/>
+                <exclude name="**/test/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="copy-configuration-production" depends="update-version-label">
+        <copy todir="${build.main.classes}">
+            <fileset dir="${basedir}/config">
+                <include name="*.xml"/>
+                <include name="*.properties"/>
+                <exclude name="**/*.war"/>
+                <exclude name="**/*formcenterMap.map.xml"/>
+            </fileset>
+        </copy>
+
+        <copy  todir="${build.main.webroot}" overwrite="true">
+            <fileset dir="${src.web}">
+                <exclude name="WEB-INF/web.xml"/>
+                <exclude name="**/*.war"/>
+                <exclude name="**/*formcenterMap.map.xml"/>
+                <exclude name="**/test/**"/>
+            	<exclude name="border-template.htm"/>
+            </fileset>
+
+            <fileset dir="${build.web.dir}">
+            	<include name="border-template.htm"/>
+            </fileset>
+        </copy>
+
+    </target>
+
+    <target name="dist-package-production" depends="copy-configuration-production">
+        <war destfile="${build.web.package}" webxml="${src.web}/WEB-INF/web.xml">
+            <classes dir="${build.main.classes}"/>
+            <fileset dir="${build.main.webroot}">
+            	<include name="**/*.*"/>
+            </fileset>
+        </war>
+    </target>
+</project>

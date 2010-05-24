@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project relativePaths="false" version="4">
+  <component name="AntConfiguration">
+    <defaultAnt bundledAnt="true" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <additionalClassPath />
+      <antReference projectDefault="true" />
+      <customJdkName value="" />
+      <maximumHeapSize value="128" />
+      <maximumStackSize value="32" />
+      <properties />
+    </buildFile>
+  </component>
+  <component name="BuildJarProjectSettings">
+    <option name="BUILD_JARS_ON_MAKE" value="false" />
+  </component>
+  <component name="CodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS" />
+    <option name="USE_PER_PROJECT_SETTINGS" value="false" />
+  </component>
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <option name="DEPLOY_AFTER_MAKE" value="0" />
+    <resourceExtensions>
+      <entry name=".+\.(properties|xml|html|dtd|tld)" />
+      <entry name=".+\.(gif|png|jpeg|jpg)" />
+    </resourceExtensions>
+    <wildcardResourcePatterns>
+      <entry name="?*.properties" />
+      <entry name="?*.xml" />
+      <entry name="?*.gif" />
+      <entry name="?*.png" />
+      <entry name="?*.jpeg" />
+      <entry name="?*.jpg" />
+      <entry name="?*.html" />
+      <entry name="?*.dtd" />
+      <entry name="?*.tld" />
+      <entry name="?*.ftl" />
+    </wildcardResourcePatterns>
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="DependencyValidationManager">
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="EclipseCompilerSettings">
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="true" />
+    <option name="DEPRECATION" value="false" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+    <option name="MAXIMUM_HEAP_SIZE" value="128" />
+  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="FacetAutodetectingManager">
+    <autodetection-disabled>
+      <facet-type id="Spring">
+        <modules>
+          <module name="Localhost">
+            <files>
+              <file url="file://$PROJECT_DIR$/apache-tomcat-6.0.24/work/Catalina/localhost/all4biz/loader/org/springframework/jdbc/support/sql-error-codes.xml" />
+            </files>
+          </module>
+          <module name="Telstra.all4biz.portal">
+            <files>
+              <file url="file://$PROJECT_DIR$/apache-tomcat-6.0.24/work/Catalina/localhost/all4biz/loader/org/springframework/jdbc/support/sql-error-codes.xml" />
+            </files>
+          </module>
+        </modules>
+      </facet-type>
+      <facet-type id="web">
+        <modules>
+          <module name="Telstra.all4biz.portal">
+            <files>
+              <file url="file://$PROJECT_DIR$/apache-tomcat-6.0.24/conf/web.xml" />
+              <file url="file://$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/WEB-INF/web.xml" />
+              <file url="file://$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/selenium/WEB-INF/web.xml" />
+              <file url="file://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/web.xml" />
+            </files>
+          </module>
+        </modules>
+      </facet-type>
+    </autodetection-disabled>
+  </component>
+  <component name="InspectionProjectProfileManager">
+    <option name="PROJECT_PROFILE" value="Project Default" />
+    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
+    <scopes />
+    <profiles>
+      <profile version="1.0" is_locked="false">
+        <option name="myName" value="Project Default" />
+        <option name="myLocal" value="false" />
+      </profile>
+    </profiles>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="SERVER PROBLEM" />
+      <item index="1" class="java.lang.String" itemvalue="INFO" />
+      <item index="2" class="java.lang.String" itemvalue="WARNING" />
+      <item index="3" class="java.lang.String" itemvalue="ERROR" />
+    </list>
+  </component>
+  <component name="JavacSettings">
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="false" />
+    <option name="DEPRECATION" value="true" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+    <option name="MAXIMUM_HEAP_SIZE" value="128" />
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" />
+    <option name="OPTION_SCOPE" value="protected" />
+    <option name="OPTION_HIERARCHY" value="true" />
+    <option name="OPTION_NAVIGATOR" value="true" />
+    <option name="OPTION_INDEX" value="true" />
+    <option name="OPTION_SEPARATE_INDEX" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_USE" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
+    <option name="OPTION_DEPRECATED_LIST" value="true" />
+    <option name="OTHER_OPTIONS" value="" />
+    <option name="HEAP_SIZE" />
+    <option name="LOCALE" />
+    <option name="OPEN_IN_BROWSER" value="true" />
+  </component>
+  <component name="JikesSettings">
+    <option name="JIKES_PATH" value="" />
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="DEPRECATION" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="false" />
+    <option name="IS_EMACS_ERRORS_MODE" value="true" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+  </component>
+  <component name="ModuleEditorState">
+    <option name="LAST_EDITED_MODULE_NAME" />
+    <option name="LAST_EDITED_TAB_NAME" />
+  </component>
+  <component name="Palette2">
+    <group name="Swing">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+      </item>
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+        <initial-values>
+          <property name="text" value="Button" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="RadioButton" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="CheckBox" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="Label" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+      </item>
+    </group>
+  </component>
+  <component name="ProjectDetails">
+    <option name="projectName" value="telstra.all4biz.portal" />
+  </component>
+  <component name="ProjectFileVersion" converted="true">
+    <converter id="javaee-modules" />
+    <converter id="ror-modules" />
+    <converter id="SelenaRunConfToDiana" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Telstra.all4biz.portal.iml" filepath="$PROJECT_DIR$/Telstra.all4biz.portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vendor/Vendor.iml" filepath="$PROJECT_DIR$/vendor/Vendor.iml" />
+    </modules>
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.5" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ResourceManagerContainer">
+    <option name="myResourceBundles">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+  </component>
+  <component name="RmicSettings">
+    <option name="IS_EANABLED" value="false" />
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="false" />
+    <option name="GENERATE_IIOP_STUBS" value="false" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false" runner="emma">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+    </configuration>
+    <list size="0" />
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="UPDATE_RUN_STATUS" value="false" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="svn" />
+  </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="libraryTable">
+    <library name="bin">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/bin/commons-daemon.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/bin/tomcat-juli.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/bin/bootstrap.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="cayenne-ant">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/build/cayenne-ant/cayenne-tools-3.0B1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/build/cayenne-ant/cayenne-server-3.0B1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="cobertura-1.9">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/build/cobertura-1.9/jakarta-oro-2.0.8.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/build/cobertura-1.9/asm-3.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/build/cobertura-1.9/log4j-1.2.9.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/build/cobertura-1.9/cobertura.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/build/cobertura-1.9/asm-tree-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="compile">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/compile/xalan.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/compile/xml-apis.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/compile/javax.servlet.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/compile/sqljdbc.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/compile/serializer.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="lib">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/selenium/WEB-INF/lib/selenium-fitrunner-web.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/selenium/WEB-INF/lib/standard.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/selenium/WEB-INF/lib/jstl.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/selenium/WEB-INF/lib/junit-3.8.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/selenium/WEB-INF/lib/ant.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/selenium/WEB-INF/lib/optional.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="lib1">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/jasper-el.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-i18n-es.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-i18n-ja.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/jasper-jdt.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/javax.activation_1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-i18n-fr.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/wlclient.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-dbcp.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/catalina.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/sqljdbc.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/catalina-tribes.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/jasper.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/catalina-ant.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/serializer-2.7.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/el-api.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/servlet-api.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/catalina-ha.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/annotations-api.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/jsp-api.jar!/" />
+        <root url="jar://$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-coyote.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="lib2">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/spring-2.5.6.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/aopalliance-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/ashwood-2.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/XmlSchema-1.4.5.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/click-2.1.0-RC1-incubating.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/asm-2.2.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/stax-utils-20060502.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/adobe-livecycle-client-8.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/xalan-2.7.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/geronimo-annotation_1.0_spec-1.1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/saxpath-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/xml-resolver-1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/wsdl4j-1.6.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/avoka-fc2-core.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/commons-collections-3.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/opencsv-2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/jaxb-impl-2.1.9.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/geronimo-jaxws_2.1_spec-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/avoka-fc2-lces.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/wstx-asl-3.2.6.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/slf4j-api-1.5.8.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/adobe-forms-client-8.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/oscache-2.4.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/adobe-formdataintegration-client-8.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/acegi-security-1.0.7.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/geronimo-ws-metadata_2.0_spec-1.1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/neethi-2.0.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/saaj-api-1.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/FastInfoset-1.2.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/avoka-core.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/cxf-2.1.5.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/log4j-1.2.14.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/avoka-fc2-forms-api.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/jaxb-api-2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/oro-2.0.8.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/commons-httpclient-3.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/saaj-impl-1.3.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/httpclient-4.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/slf4j-log4j12-1.5.8.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/jaxen-full-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/click-extras-2.1.0-RC1-incubating.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/joda-time-1.6.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/xom-1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/httpcore-4.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/cayenne-server-3.0B1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/geronimo-stax-api_1.0_spec-1.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/build/deploy/all4biz/WEB-INF/lib/adobe-usermanager-client-8.2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="lib3">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/slf4j-api-1.5.8.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/xom-1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/xml-resolver-1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/oro-2.0.8.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-2.5.6.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/saaj-api-1.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/FastInfoset-1.2.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/avoka-fc2-lces.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/adobe-livecycle-client-8.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/slf4j-log4j12-1.5.8.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/geronimo-stax-api_1.0_spec-1.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/avoka-fc2-forms-api.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/saaj-impl-1.3.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/xalan-2.7.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/ashwood-2.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/log4j-1.2.14.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/adobe-formdataintegration-client-8.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/stax-utils-20060502.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/adobe-forms-client-8.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/click-extras-2.1.0-RC1-incubating.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/cayenne-server-3.0B1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/jaxb-impl-2.1.9.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/httpclient-4.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/click-2.1.0-RC1-incubating.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/geronimo-ws-metadata_2.0_spec-1.1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/jaxen-full-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/wsdl4j-1.6.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/joda-time-1.6.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/adobe-usermanager-client-8.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/opencsv-2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/avoka-core.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/avoka-fc2-core.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/XmlSchema-1.4.5.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/commons-httpclient-3.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/oscache-2.4.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/asm-2.2.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/geronimo-annotation_1.0_spec-1.1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/neethi-2.0.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/httpcore-4.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/jaxb-api-2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/aopalliance-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/saxpath-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/geronimo-jaxws_2.1_spec-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/wstx-asl-3.2.6.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/cxf-2.1.5.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/acegi-security-1.0.7.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/commons-collections-3.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/quartz-all-1.6.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="selenium">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/vendor/selenium/commons-httpclient-3.0-beta1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/vendor/selenium/selenium-server.jar!/" />
+        <root url="jar://$PROJECT_DIR$/vendor/selenium/commons-codec-1.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/vendor/selenium/jacob.jar!/" />
+        <root url="jar://$PROJECT_DIR$/vendor/selenium/commons-io-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/vendor/selenium/commons-logging-1.0.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="source">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/source/Cayenne-3.0B1-win.zip!/" />
+        <root url="jar://$PROJECT_DIR$/lib/source/click-2.1.0-RC1-incubating.zip!/" />
+        <root url="jar://$PROJECT_DIR$/lib/source/avoka-core-src.zip!/" />
+        <root url="jar://$PROJECT_DIR$/lib/source/avoka-fc2-core-src.zip!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="test">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/test/cglib-2.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/test/asm-3.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/test/easymockclassextension-2.2.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/test/easymock-2.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/test/junit-4.8.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/test/jrunittesthelper.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
+</project>
+

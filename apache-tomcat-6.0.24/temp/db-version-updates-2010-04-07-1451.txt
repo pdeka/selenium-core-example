@@ -1,0 +1,130 @@
+Update started at Wed Apr 07 14:51:06 EST 2010
+
+Version: 70
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 71
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 72
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 73
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 74
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 75
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 76
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 77
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 78
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 79
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 80
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 81
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 82
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 83
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 84
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 85
+Release: 2
+Rows updated: 2
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 86
+Release: 2
+Rows updated: 2
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 87
+Release: 2
+Rows updated: 2
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 88
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 89
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Version: 90
+Release: 2
+Rows updated: 1
+Executed: Executed custom updater com.telstra.all4biz.db.update.CayenneObjectPropertyUpdater
+Execute timestamp: Wed Apr 07 14:51:07 EST 2010
+
+Update completed successfully.
+21 changes were applied to the database.
