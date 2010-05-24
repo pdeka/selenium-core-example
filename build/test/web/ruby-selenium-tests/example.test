@@ -1,3 +1,0 @@
-resetSystem
-
-assertTextPresent "Administration"
