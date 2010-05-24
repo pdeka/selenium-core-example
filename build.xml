@@ -3,18 +3,14 @@
 <project name="all4biz" default="all" basedir=".">
 
     <property file="${basedir}/build.${env}.properties"/>
-
     <property name="utilities.java.classes" value="${basedir}/build/utilities-java-classes"/>
-
     <property name="selenium.output.dir" value="${basedir}/output/selenium"/>
     <property name="unit.test.output.dir" value="${basedir}/output/unit-tests"/>
     <property name="test.coverage.dir" value="${basedir}/output/tests-coverage"/>
     <property name="output.dir" value="${basedir}/output"/>
     <property name="build.compile.debug" value="true"/>
     <property name="build.compile.deprecation" value="false"/>
-    <property name="src.dir" value="src"/>
-    <property name="src.main" value="${src.dir}"/>
-    <property name="docs.dir" value="docs"/>
+    <property name="src.main" value="src"/>
     <property name="src.web" value="WebRoot"/>
     <property name="src.test.java" value="junit"/>
     <property name="src.test.web" value="functional-tests"/>
@@ -66,7 +62,7 @@
         <pathelement location="${test.java.classes}"/>
         <pathelement location="${src.web}"/>
         <pathelement location="${src.web}/WEB-INF/classes"/>
-        <pathelement location="${src.dir}/properties"/>
+        <pathelement location="${src.main}/properties"/>
         <pathelement location="test/data"/>
         <fileset dir="${lib.test}" includes="**/*.jar"/>
         <path refid="project.class.path"/>
@@ -213,7 +209,7 @@
     <!--depends="init, hotdeploy-resources, build-main-classes, instrument-code, copy-uninstrumented-code">-->
 
     <!--<copy todir="${build.deploy.classes}">-->
-    <!--<fileset dir="${src.dir}">-->
+    <!--<fileset dir="${src.main}">-->
     <!--<exclude name="**/*.java"/>-->
     <!--</fileset>-->
     <!--</copy>-->
@@ -335,7 +331,7 @@
                 <tomcat-launcher/>
             </daemons>
         </parallel>
-        <sleep seconds="20"/>
+        <sleep seconds="5"/>
     </target>
 
     <target name="stop-tomcat">
@@ -425,7 +421,7 @@
                     Sleep for 10 seconds before running Cobertura report, to provide JVM time
                     to properly write data to the 'cobertura.ser' file
                 -->
-            <sleep seconds="10"/>
+            <sleep seconds="5"/>
         </sequential>
     </macrodef>
 

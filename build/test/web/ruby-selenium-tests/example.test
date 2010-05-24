@@ -1,0 +1,3 @@
+resetSystem
+
+assertTextPresent "Administration"
