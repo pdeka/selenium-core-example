@@ -312,8 +312,8 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Telstra.all4biz.portal.iml" filepath="$PROJECT_DIR$/Telstra.all4biz.portal.iml" />
       <module fileurl="file://$PROJECT_DIR$/vendor/Vendor.iml" filepath="$PROJECT_DIR$/vendor/Vendor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/selenium-core-example.iml" filepath="$PROJECT_DIR$/selenium-core-example.iml" />
     </modules>
   </component>
   <component name="ProjectReloadState">
