@@ -1,5 +1,0 @@
-[INFO | 07-Apr-2010 15:07:18 | main | com.telstra.all4biz.service.DatabaseVersionService] DatabaseVersionService: Updating database...
-[INFO | 07-Apr-2010 15:07:18 | main | com.telstra.all4biz.service.DatabaseVersionService] DatabaseVersionService: Results will be written to C:\dev\newall4biz\telstra.all4biz.portal\apache-tomcat-6.0.24\temp\db-version-updates-2010-04-07-1507.txt
-[INFO | 07-Apr-2010 15:07:19 | main | com.telstra.all4biz.service.DatabaseVersionService] DatabaseVersionService: Update successful.
-[INFO | 07-Apr-2010 15:07:48 | http-8080-1 | com.telstra.all4biz.page.secure.test.SubmissionPage] RequestLogKey updated to 'ce98b81fc062742aa1fd155bd45fbc18'
-[INFO | 07-Apr-2010 15:07:49 | http-8080-2 | com.telstra.all4biz.servlet.All4BizSubmissionServlet] Completed Form Submission (ID=1216) in 250ms

@@ -38,6 +38,9 @@
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
   </component>
+  <component name="CopyrightManager" default="">
+    <module2copyright />
+  </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
@@ -295,11 +298,7 @@
   <component name="ProjectDetails">
     <option name="projectName" value="telstra.all4biz.portal" />
   </component>
-  <component name="ProjectFileVersion" converted="true">
-    <converter id="javaee-modules" />
-    <converter id="ror-modules" />
-    <converter id="SelenaRunConfToDiana" />
-  </component>
+  <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -319,7 +318,7 @@
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.5" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ResourceManagerContainer">
@@ -609,6 +608,7 @@
         <root url="jar://$PROJECT_DIR$/vendor/selenium/jacob.jar!/" />
         <root url="jar://$PROJECT_DIR$/vendor/selenium/commons-io-1.0.jar!/" />
         <root url="jar://$PROJECT_DIR$/vendor/selenium/commons-logging-1.0.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/vendor/selenium/commons-lang-2.5.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
