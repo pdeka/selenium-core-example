@@ -2,22 +2,15 @@
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" name="Default" comment="Added files that are were missed out in the initial revision.">
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\all-wcprops" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\entries" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\SeleniumPoller.java.svn-base" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\ResultWriter.java.svn-base" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\UrlPoller.java.svn-base" afterPath="" />
       <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\SeleniumRunnerConfig.java.svn-base" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\format" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\entries" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\entries" afterPath="" />
       <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\SeleniumInitializer.java.svn-base" afterPath="" />
       <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\all-wcprops" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\text-base\FirefoxChromeLauncher.java.svn-base" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\text-base\Context.java.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\SeleniumPoller.java.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\ResultWriter.java.svn-base" afterPath="" />
       <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\ResponseEvaluator.java.svn-base" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\text-base\Profile.java.svn-base" afterPath="" />
       <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\format" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\text-base\UserPref.java.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\UrlPoller.java.svn-base" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/telstra.all4biz.portal.iws" afterPath="$PROJECT_DIR$/telstra.all4biz.portal.iws" />
     </list>
     <ignored path=".idea/workspace.xml" />
