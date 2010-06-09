@@ -1,11 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" name="Default" comment="Story 438 - Do not need to calculate amortisation for casual customers when the amortisation button is clicked.&#10;When we do sum of previous amortisations, do not take the amortisation for the current month.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/telstra.all4biz.portal.ipr" afterPath="$PROJECT_DIR$/telstra.all4biz.portal.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+    <list default="true" readonly="true" name="Default" comment="Changed names in a few files.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/build/cobertura-1.9/asm-3.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/build/cobertura-1.9/jakarta-oro-2.0.8.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/catalina-tribes.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/conf/logging.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/build/cobertura-1.9/cobertura.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/serializer-2.7.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/test/junit-4.8.1.jar" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\text-base\FirefoxChromeLauncher.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/test/easymock-2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/serializer.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/jasper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/version.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-i18n-ja.jar" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\UrlPoller.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/conf/catalina.properties" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\SeleniumRunnerConfig.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/annotations-api.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/build/cobertura-1.9/asm-tree-3.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/build/cayenne-ant/cayenne-tools-3.0B1.jar" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\text-base\UserPref.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-i18n-fr.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/conf/context.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/asf-logo-wide.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/tomcat-juli.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/catalina.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/catalina-tasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/source/avoka-core-src.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/catalina.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/xml-apis.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/conf/server.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/tool-wrapper.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/jsvc.tar.gz" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\text-base\Profile.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/conf/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/telstra.all4biz.portal.iws" afterPath="$PROJECT_DIR$/telstra.all4biz.portal.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/conf/tomcat-users.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/RELEASE-NOTES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/el-api.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/test/cglib-2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/commons-daemon.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/cpappend.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/xalan.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-coyote.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/index.jsp" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\text-base\Context.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/sqljdbc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/build/cayenne-ant/cayenne-server-3.0B1.jar" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\entries" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/startup.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/javax.activation_1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/bootstrap.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/javax.servlet.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/servlet-api.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/tomcat-power.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/conf/catalina.policy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/shutdown.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/source/avoka-fc2-core-src.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/digest.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/source/click-2.1.0-RC1-incubating.zip" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\ResultWriter.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-i18n-es.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/sqljdbc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/tomcat-native.tar.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/wlclient.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/startup.sh" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\format" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/selenium.war" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/test/asm-3.2.jar" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\SeleniumInitializer.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/shutdown.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/jsp-api.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/digest.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/catalina.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/source/Cayenne-3.0B1-win.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/setclasspath.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/catalina-ant.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/tomcat.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/setclasspath.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/test/jrunittesthelper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/tool-wrapper.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/tomcat.gif" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\all-wcprops" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/webapps/ROOT/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/test/easymockclassextension-2.2.2.jar" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\all-wcprops" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/catalina-ha.jar" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\SeleniumPoller.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/velocity.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/jasper-jdt.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/bin/version.sh" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\.svn\entries" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/build/sqldriver/sqljdbc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/tomcat-dbcp.jar" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\text-base\ResponseEvaluator.java.svn-base" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/build/cobertura-1.9/log4j-1.2.9.jar" />
+      <change type="DELETED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\.svn\format" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-tomcat-6.0.24/lib/jasper-el.jar" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="telstra.all4biz.portal.iws" />
@@ -77,10 +174,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="81" selection-start="579" selection-end="579" vertical-scroll-proportion="0.22309712">
+            <state line="57" column="9" selection-start="2682" selection-end="2682" vertical-scroll-proportion="-11.916667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,16 +195,7 @@
       <file leaf-file-name="selenium_methods.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functional-tests/methods/selenium_methods.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="47" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datahandler.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functional-tests/datahandler.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="27" column="61" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -245,7 +342,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="176" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="142" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="31" />
@@ -805,18 +902,18 @@
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950467" sideWeight="0.5" order="0" side_tool="false" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="11" side_tool="false" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3270142" sideWeight="0.5" order="11" side_tool="false" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32927817" sideWeight="0.0" order="2" side_tool="false" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32927817" sideWeight="0.6646919" order="2" side_tool="false" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992891" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46347943" sideWeight="0.5" order="5" side_tool="false" x="24" y="510" width="1393" height="309" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64674634" sideWeight="0.5" order="10" side_tool="false" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36088154" sideWeight="0.5" order="12" side_tool="false" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3601896" sideWeight="0.5" order="12" side_tool="false" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="9" side_tool="false" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950467" sideWeight="0.5" order="5" side_tool="false" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3300892" sideWeight="0.6295302" order="0" side_tool="false" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3300892" sideWeight="0.6646919" order="0" side_tool="false" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" />
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" />
@@ -839,7 +936,7 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Story 438 - Do not need to calculate amortisation for casual customers when the amortisation button is clicked.&#10;When we do sum of previous amortisations, do not take the amortisation for the current month." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed names in a few files." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -864,6 +961,7 @@
     <MESSAGE value="Added a few things to the readme" />
     <MESSAGE value="Donot need to have 2 different config folders. Thus removing Classes and WEB-INF as folders. Changing the build.xml and build-production.xml to read from just one folder" />
     <MESSAGE value="Story 438 - Do not need to calculate amortisation for casual customers when the amortisation button is clicked.&#10;When we do sum of previous amortisations, do not take the amortisation for the current month." />
+    <MESSAGE value="Changed names in a few files." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -970,11 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functional-tests/methods/selenium_methods.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="47" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functional-tests/datahandler.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1006,9 +1099,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functional-tests/methods/selenium_methods.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="61" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="81" selection-start="579" selection-end="579" vertical-scroll-proportion="0.22309712">
+        <state line="57" column="9" selection-start="2682" selection-end="2682" vertical-scroll-proportion="-11.916667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
