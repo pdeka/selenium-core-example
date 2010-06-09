@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="all4biz" default="all" basedir=".">
+<project name="selenium-core-example" default="all" basedir=".">
 
     <property file="${basedir}/build.${env}.properties"/>
     <property name="utilities.java.classes" value="${basedir}/build/utilities-java-classes"/>
