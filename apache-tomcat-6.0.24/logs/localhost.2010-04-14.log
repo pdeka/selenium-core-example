@@ -1,0 +1,236 @@
+14/04/2010 16:02:18 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 16:33:42 org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+14/04/2010 16:33:56 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 16:42:22 org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+14/04/2010 16:43:05 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 16:43:09 org.apache.catalina.core.StandardContext listenerStart
+SEVERE: Exception sending context initialized event to listener instance of class com.avoka.fc.core.servlet.PortalInitContextListener
+java.lang.RuntimeException: org.apache.cayenne.CayenneRuntimeException: [v.3.0B1 Nov 03 2009 19:02:23] Error detecting database type: Login failed for user 'formcenter'.
+	at com.avoka.fc.core.servlet.PortalInitContextListener.contextInitialized(PortalInitContextListener.java:35)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3972)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4467)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:526)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:637)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:563)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:498)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:722)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:593)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.cayenne.CayenneRuntimeException: [v.3.0B1 Nov 03 2009 19:02:23] Error detecting database type: Login failed for user 'formcenter'.
+	at org.apache.cayenne.dba.AutoAdapter.loadAdapter(AutoAdapter.java:185)
+	at org.apache.cayenne.dba.AutoAdapter.getAdapter(AutoAdapter.java:155)
+	at org.apache.cayenne.dba.AutoAdapter.getExtendedTypes(AutoAdapter.java:263)
+	at org.apache.cayenne.access.DataNode.performQueries(DataNode.java:243)
+	at org.apache.cayenne.access.DataDomainQueryAction.runQuery(DataDomainQueryAction.java:418)
+	at org.apache.cayenne.access.DataDomainQueryAction.access$000(DataDomainQueryAction.java:65)
+	at org.apache.cayenne.access.DataDomainQueryAction$2.transform(DataDomainQueryAction.java:391)
+	at org.apache.cayenne.access.DataDomain.runInTransaction(DataDomain.java:850)
+	at org.apache.cayenne.access.DataDomainQueryAction.runQueryInTransaction(DataDomainQueryAction.java:388)
+	at org.apache.cayenne.access.DataDomainQueryAction.execute(DataDomainQueryAction.java:117)
+	at org.apache.cayenne.access.DataDomain.onQuery(DataDomain.java:743)
+	at org.apache.cayenne.util.ObjectContextQueryAction.runQuery(ObjectContextQueryAction.java:333)
+	at org.apache.cayenne.util.ObjectContextQueryAction.execute(ObjectContextQueryAction.java:96)
+	at org.apache.cayenne.access.DataContext.onQuery(DataContext.java:1278)
+	at org.apache.cayenne.access.DataContext.performQuery(DataContext.java:1267)
+	at com.avoka.core.dao.BaseDao.performQuery(BaseDao.java:188)
+	at com.avoka.fc.core.dao.PortalDao.getPortalByName(PortalDao.java:78)
+	at com.avoka.fc.core.service.DatabaseConfigService.loadPortal(DatabaseConfigService.java:392)
+	at com.avoka.fc.core.service.DatabaseConfigService.loadConfiguration(DatabaseConfigService.java:114)
+	at com.avoka.fc.core.servlet.PortalInitContextListener.contextInitialized(PortalInitContextListener.java:29)
+	... 24 more
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'formcenter'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.IOBuffer.processPackets(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(Unknown Source)
+	at org.apache.cayenne.conn.DriverDataSource.getConnection(DriverDataSource.java:156)
+	at org.apache.cayenne.conn.PooledConnectionImpl.reconnect(PooledConnectionImpl.java:83)
+	at org.apache.cayenne.conn.PooledConnectionImpl.getConnection(PooledConnectionImpl.java:120)
+	at org.apache.cayenne.conn.PoolManager.uncheckConnection(PoolManager.java:369)
+	at org.apache.cayenne.conn.PoolManager.getConnection(PoolManager.java:353)
+	at org.apache.cayenne.conn.PoolManager.getConnection(PoolManager.java:330)
+	at org.apache.cayenne.access.DataNode$TransactionDataSource.getConnection(DataNode.java:365)
+	at org.apache.cayenne.conf.NodeDataSource.getConnection(NodeDataSource.java:46)
+	at org.apache.cayenne.dba.AutoAdapter.loadAdapter(AutoAdapter.java:170)
+	... 43 more
+14/04/2010 16:43:09 org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+14/04/2010 16:43:48 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 16:43:52 org.apache.catalina.core.StandardContext listenerStart
+SEVERE: Exception sending context initialized event to listener instance of class com.avoka.fc.core.servlet.PortalInitContextListener
+java.lang.RuntimeException: org.apache.cayenne.CayenneRuntimeException: [v.3.0B1 Nov 03 2009 19:02:23] Error detecting database type: Login failed for user 'formcenter'.
+	at com.avoka.fc.core.servlet.PortalInitContextListener.contextInitialized(PortalInitContextListener.java:35)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3972)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4467)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:526)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:637)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:563)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:498)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:722)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:593)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.cayenne.CayenneRuntimeException: [v.3.0B1 Nov 03 2009 19:02:23] Error detecting database type: Login failed for user 'formcenter'.
+	at org.apache.cayenne.dba.AutoAdapter.loadAdapter(AutoAdapter.java:185)
+	at org.apache.cayenne.dba.AutoAdapter.getAdapter(AutoAdapter.java:155)
+	at org.apache.cayenne.dba.AutoAdapter.getExtendedTypes(AutoAdapter.java:263)
+	at org.apache.cayenne.access.DataNode.performQueries(DataNode.java:243)
+	at org.apache.cayenne.access.DataDomainQueryAction.runQuery(DataDomainQueryAction.java:418)
+	at org.apache.cayenne.access.DataDomainQueryAction.access$000(DataDomainQueryAction.java:65)
+	at org.apache.cayenne.access.DataDomainQueryAction$2.transform(DataDomainQueryAction.java:391)
+	at org.apache.cayenne.access.DataDomain.runInTransaction(DataDomain.java:850)
+	at org.apache.cayenne.access.DataDomainQueryAction.runQueryInTransaction(DataDomainQueryAction.java:388)
+	at org.apache.cayenne.access.DataDomainQueryAction.execute(DataDomainQueryAction.java:117)
+	at org.apache.cayenne.access.DataDomain.onQuery(DataDomain.java:743)
+	at org.apache.cayenne.util.ObjectContextQueryAction.runQuery(ObjectContextQueryAction.java:333)
+	at org.apache.cayenne.util.ObjectContextQueryAction.execute(ObjectContextQueryAction.java:96)
+	at org.apache.cayenne.access.DataContext.onQuery(DataContext.java:1278)
+	at org.apache.cayenne.access.DataContext.performQuery(DataContext.java:1267)
+	at com.avoka.core.dao.BaseDao.performQuery(BaseDao.java:188)
+	at com.avoka.fc.core.dao.PortalDao.getPortalByName(PortalDao.java:78)
+	at com.avoka.fc.core.service.DatabaseConfigService.loadPortal(DatabaseConfigService.java:392)
+	at com.avoka.fc.core.service.DatabaseConfigService.loadConfiguration(DatabaseConfigService.java:114)
+	at com.avoka.fc.core.servlet.PortalInitContextListener.contextInitialized(PortalInitContextListener.java:29)
+	... 24 more
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'formcenter'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.IOBuffer.processPackets(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(Unknown Source)
+	at org.apache.cayenne.conn.DriverDataSource.getConnection(DriverDataSource.java:156)
+	at org.apache.cayenne.conn.PooledConnectionImpl.reconnect(PooledConnectionImpl.java:83)
+	at org.apache.cayenne.conn.PooledConnectionImpl.getConnection(PooledConnectionImpl.java:120)
+	at org.apache.cayenne.conn.PoolManager.uncheckConnection(PoolManager.java:369)
+	at org.apache.cayenne.conn.PoolManager.getConnection(PoolManager.java:353)
+	at org.apache.cayenne.conn.PoolManager.getConnection(PoolManager.java:330)
+	at org.apache.cayenne.access.DataNode$TransactionDataSource.getConnection(DataNode.java:365)
+	at org.apache.cayenne.conf.NodeDataSource.getConnection(NodeDataSource.java:46)
+	at org.apache.cayenne.dba.AutoAdapter.loadAdapter(AutoAdapter.java:170)
+	... 43 more
+14/04/2010 16:43:52 org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+14/04/2010 16:50:27 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 16:50:31 org.apache.catalina.core.StandardContext listenerStart
+SEVERE: Exception sending context initialized event to listener instance of class com.avoka.fc.core.servlet.PortalInitContextListener
+java.lang.RuntimeException: org.apache.cayenne.CayenneRuntimeException: [v.3.0B1 Nov 03 2009 19:02:23] Error detecting database type: Login failed for user 'formcenter'.
+	at com.avoka.fc.core.servlet.PortalInitContextListener.contextInitialized(PortalInitContextListener.java:35)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3972)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4467)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:526)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:637)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:563)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:498)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:722)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:593)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.cayenne.CayenneRuntimeException: [v.3.0B1 Nov 03 2009 19:02:23] Error detecting database type: Login failed for user 'formcenter'.
+	at org.apache.cayenne.dba.AutoAdapter.loadAdapter(AutoAdapter.java:185)
+	at org.apache.cayenne.dba.AutoAdapter.getAdapter(AutoAdapter.java:155)
+	at org.apache.cayenne.dba.AutoAdapter.getExtendedTypes(AutoAdapter.java:263)
+	at org.apache.cayenne.access.DataNode.performQueries(DataNode.java:243)
+	at org.apache.cayenne.access.DataDomainQueryAction.runQuery(DataDomainQueryAction.java:418)
+	at org.apache.cayenne.access.DataDomainQueryAction.access$000(DataDomainQueryAction.java:65)
+	at org.apache.cayenne.access.DataDomainQueryAction$2.transform(DataDomainQueryAction.java:391)
+	at org.apache.cayenne.access.DataDomain.runInTransaction(DataDomain.java:850)
+	at org.apache.cayenne.access.DataDomainQueryAction.runQueryInTransaction(DataDomainQueryAction.java:388)
+	at org.apache.cayenne.access.DataDomainQueryAction.execute(DataDomainQueryAction.java:117)
+	at org.apache.cayenne.access.DataDomain.onQuery(DataDomain.java:743)
+	at org.apache.cayenne.util.ObjectContextQueryAction.runQuery(ObjectContextQueryAction.java:333)
+	at org.apache.cayenne.util.ObjectContextQueryAction.execute(ObjectContextQueryAction.java:96)
+	at org.apache.cayenne.access.DataContext.onQuery(DataContext.java:1278)
+	at org.apache.cayenne.access.DataContext.performQuery(DataContext.java:1267)
+	at com.avoka.core.dao.BaseDao.performQuery(BaseDao.java:188)
+	at com.avoka.fc.core.dao.PortalDao.getPortalByName(PortalDao.java:78)
+	at com.avoka.fc.core.service.DatabaseConfigService.loadPortal(DatabaseConfigService.java:392)
+	at com.avoka.fc.core.service.DatabaseConfigService.loadConfiguration(DatabaseConfigService.java:114)
+	at com.avoka.fc.core.servlet.PortalInitContextListener.contextInitialized(PortalInitContextListener.java:29)
+	... 24 more
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'formcenter'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.IOBuffer.processPackets(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(Unknown Source)
+	at org.apache.cayenne.conn.DriverDataSource.getConnection(DriverDataSource.java:156)
+	at org.apache.cayenne.conn.PooledConnectionImpl.reconnect(PooledConnectionImpl.java:83)
+	at org.apache.cayenne.conn.PooledConnectionImpl.getConnection(PooledConnectionImpl.java:120)
+	at org.apache.cayenne.conn.PoolManager.uncheckConnection(PoolManager.java:369)
+	at org.apache.cayenne.conn.PoolManager.getConnection(PoolManager.java:353)
+	at org.apache.cayenne.conn.PoolManager.getConnection(PoolManager.java:330)
+	at org.apache.cayenne.access.DataNode$TransactionDataSource.getConnection(DataNode.java:365)
+	at org.apache.cayenne.conf.NodeDataSource.getConnection(NodeDataSource.java:46)
+	at org.apache.cayenne.dba.AutoAdapter.loadAdapter(AutoAdapter.java:170)
+	... 43 more
+14/04/2010 16:50:31 org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+14/04/2010 16:51:10 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 16:56:30 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 17:00:59 org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+14/04/2010 17:01:08 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 17:01:55 org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+14/04/2010 17:02:10 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 17:34:54 org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+14/04/2010 17:37:12 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+14/04/2010 17:38:07 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext

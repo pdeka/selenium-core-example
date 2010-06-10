@@ -1,0 +1,48 @@
+24/05/2010 12:29:19 org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\bea\jdk150_11\bin;.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\WBEM;C:\Ruby\bin;C:\bea\jdk150_11\bin;C:\apache-ant-1.7.1\bin;C:\Program Files\Git\cmd
+24/05/2010 12:29:19 org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+24/05/2010 12:29:19 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 435 ms
+24/05/2010 12:29:19 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+24/05/2010 12:29:19 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.24
+24/05/2010 12:29:19 org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor all4biz.xml
+24/05/2010 12:29:19 org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor selenium-tests.xml
+24/05/2010 12:29:19 org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive selenium.war
+24/05/2010 12:29:19 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory .svn
+24/05/2010 12:29:19 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+24/05/2010 12:29:19 org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+24/05/2010 12:29:19 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 449 ms
+24/05/2010 15:29:35 org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\bea\jdk150_11\bin;.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\WBEM;C:\Ruby\bin;C:\bea\jdk150_11\bin;C:\apache-ant-1.7.1\bin;C:\Program Files\Git\cmd
+24/05/2010 15:29:35 org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+24/05/2010 15:29:35 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 354 ms
+24/05/2010 15:29:35 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+24/05/2010 15:29:35 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.24
+24/05/2010 15:29:35 org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor all4biz.xml
+24/05/2010 15:29:35 org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor selenium-tests.xml
+24/05/2010 15:29:35 org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive selenium.war
+24/05/2010 15:29:36 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory .svn
+24/05/2010 15:29:36 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+24/05/2010 15:29:36 org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+24/05/2010 15:29:36 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 516 ms
