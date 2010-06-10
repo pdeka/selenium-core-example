@@ -2,9 +2,9 @@ package com.prabindeka.selenium.runner;
 
 import junit.framework.TestCase;
 
-public class AvokaFirefoxChromeLauncherTest extends TestCase {
+public class FirefoxChromeLauncherTest extends TestCase {
 
-    public AvokaFirefoxChromeLauncherTest(String testCase) {
+    public FirefoxChromeLauncherTest(String testCase) {
         super(testCase);
     }
 

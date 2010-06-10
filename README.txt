@@ -30,7 +30,7 @@ it does not have this permission.
 
 PLEASE NOTE THAT ITS ADVISABLE NOT TO BROWSE THE INTERNET USING THE 'WEBDRIVER' PROFILE.
 
-Run c:\dev\all4biz\apache-tomcat-6.0.24\bin\startup.bat to start the tomcat server.
+Run <project root>\<tomcat home>\bin\startup.bat to start the tomcat server.
 
 Go to http://localhost:8080/selenium/TestRunner.html?test=/selenium-tests/TestSuite.html to use the selenium dashboard.
 
@@ -44,16 +44,7 @@ profile. This means that when you answer the above security question, it remembe
 in the original one. To make it remember the answer in the original 'webdriver' profile, please start firefox in webdriver
 profile manually and run the tests using http://localhost:8080/selenium/TestRunner.html?test=/selenium-tests/TestSuite.html
 
-2. I get a 'Permission denied .. Location.toString' error everytime I run the a few tests?
-
-The tests attempts to submit the PDF form to the formcenter and uses the portal url mentioned in formcenter; in
-System > Portals. You should have the following entry there.
-
-Telstra All-4-Biz Online	http://localhost:8080/all4biz/	The Telstra All-4-Biz & Loyalty Bonus Online Portal
-
-Please note that the 'localhost' should be mention as such and the machine name should not be used.
-
-3. File upload is not possible using regular Selenium Core. How was it achieved in the project?
+2. File upload is not possible using regular Selenium Core. How was it achieved in the project?
 
 Getting file upload using javascript will always be an issue. We don't think Selenium would ever put in a solution to that.
 Have a read through http://cakebaker.42dh.com/2006/03/29/file-upload-with-selenium/
