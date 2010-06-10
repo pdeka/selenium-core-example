@@ -52,7 +52,8 @@
             utilities-compile, generate-deploy-tests, run-functional-tests, create-coverage-report"
             description="Main target which builds everything and runs all tests"/>
 
-    <target name="check-tomcat-is-running">
+    <target name="check-tomcat-is-running"
+            description="The build starts tomcat. You cannot have another instance running on the same port.">
         <echo>Server port ${server.port}</echo>
         <waitfor maxwait="100" maxwaitunit="millisecond" timeoutproperty="tomcat.stopped">
             <http url="http://localhost:${server.port}/"/>
@@ -61,7 +62,7 @@
         <fail unless="tomcat.stopped">Tomcat is already running.</fail>
     </target>
 
-    <target name="clean">
+    <target name="clean" description="Cleans everything">
         <delete dir="${build.dir}"/>
         <delete dir="${tomcat.home}/webapps/selenium"/>
         <delete dir="${tomcat.home}/webapps/selenium-tests"/>
@@ -71,7 +72,7 @@
         <delete dir="${output.dir}/unit-tests"/>
     </target>
 
-    <target name="init">
+    <target name="init" description="Initializes the project.">
         <mkdir dir="${basedir}/output"/>
         <mkdir dir="${build.dir}"/>
         <mkdir dir="${build.web.dir}"/>
@@ -84,11 +85,11 @@
 
     <target name="build-all" description="Build production classes and unit tests"/>
 
-    <target name="run-unit-tests"/>
+    <target name="run-unit-tests" description="Run all the unit tests"/>
 
     <target name="clean-initialize-db" description="Clean database and initialize for the functional tests to run"/>
 
-    <target name="utilities-compile">
+    <target name="utilities-compile" description="Compile all the utility classes.">
         <compile classpathref="utilities.compile.classpath" src="${basedir}/vendor/utilities"
                  destDir="${utilities.java.classes}"/>
     </target>
@@ -100,13 +101,15 @@
         </copy>
     </target>
 
-    <target name="run-functional-tests" depends="start-tomcat,  run-selenium-tests, stop-tomcat"/>
+    <target name="run-functional-tests" depends="start-tomcat,  run-selenium-tests, stop-tomcat"
+            description="Run all the functional tests"/>
 
 
     <!--I don't have src code right now. But I still felt this target needs would be of value to the devs. You have -->
     <!--to get instrumentation over your source code to be able to get a coverage report.-->
 
-    <target name="create-coverage-report" depends="init" if="instrument">
+    <target name="create-coverage-report" depends="init" if="instrument"
+            description="Create a coverage report of code covered by unit and functional tests.">
         <!--<cobertura-report format="xml" datafile="cobertura.ser" destdir="${test.coverage.dir}" srcdir="${src.main}"/>-->
     </target>
 
