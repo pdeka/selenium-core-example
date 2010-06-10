@@ -255,7 +255,11 @@
   <component name="ProjectDetails">
     <option name="projectName" value="telstra.all4biz.portal" />
   </component>
-  <component name="ProjectFileVersion" converted="true" />
+  <component name="ProjectFileVersion" converted="true">
+    <converter id="javaee-modules" />
+    <converter id="ror-modules" />
+    <converter id="SelenaRunConfToDiana" />
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/vendor/Vendor.iml" filepath="$PROJECT_DIR$/vendor/Vendor.iml" />

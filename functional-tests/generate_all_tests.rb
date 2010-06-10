@@ -1,4 +1,4 @@
-    require 'rubygems'
+require 'rubygems'
 require 'RubySelenium'
 require 'methods/selenium_methods'
 require 'stringio'

@@ -18,7 +18,7 @@ GENERATE_LOCATION = ../build/test/web
 # to find your tests then you should set this property to
 # http://localhost:9081/Selenium/tests/Ruby
 
-TEST_LOCATION = http://usr-ppandya2:8080/selenium-tests
+TEST_LOCATION = http://localhost:8080/selenium-tests
 
 # LOGGING
 # This turns the log output on or off when using the generate command.
