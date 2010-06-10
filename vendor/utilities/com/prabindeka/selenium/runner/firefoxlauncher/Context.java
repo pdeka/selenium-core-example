@@ -1,4 +1,4 @@
-package com.avoka.selenium.runner.firefoxlauncher;
+package com.prabindeka.selenium.runner.firefoxlauncher;
 
 class Context {
     private final String fromExtension;

@@ -1,22 +1,21 @@
-package com.avoka.selenium.runner;
+package com.prabindeka.selenium.runner;
 
-import com.avoka.selenium.runner.firefoxlauncher.FirefoxChromeLauncher;
 import org.openqa.selenium.server.browserlaunchers.WindowsUtils;
 
-public class AvokaFirefoxChromeLauncher implements AvokaBrowserLauncher {
+public class FirefoxChromeLauncher implements BrowserLauncher {
     private static final String PROFILE_NAME = "webdriver";
 
     private String firefoxExe;
     private boolean closed;
-    private FirefoxChromeLauncher firefoxChromeLauncher;
+    private com.prabindeka.selenium.runner.firefoxlauncher.FirefoxChromeLauncher firefoxChromeLauncher;
     private String[] cmdArray;
 
-    public AvokaFirefoxChromeLauncher(String firefoxExe) {
+    public FirefoxChromeLauncher(String firefoxExe) {
         this.firefoxExe = firefoxExe;
     }
 
     public void launch(String url, boolean visible) {
-        firefoxChromeLauncher = new FirefoxChromeLauncher(PROFILE_NAME, url, firefoxExe);
+        firefoxChromeLauncher = new com.prabindeka.selenium.runner.firefoxlauncher.FirefoxChromeLauncher(PROFILE_NAME, url, firefoxExe);
         cmdArray = firefoxChromeLauncher.getCmdArray();
         closed = false;
     }

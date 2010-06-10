@@ -3,7 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium-core-example.iws" afterPath="$PROJECT_DIR$/selenium-core-example.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.dev.properties" afterPath="$PROJECT_DIR$/build.dev.properties" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\test\com\avoka\selenium\runner\firefoxlauncher\FirefoxChromeLauncherTest.java" afterPath="$PROJECT_DIR$/vendor/test/com/prabindeka/selenium/runner/firefoxlauncher/FirefoxChromeLauncherTest.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\ResultWriter.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/util/ResultWriter.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\SeleniumRunnerConfig.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/util/SeleniumRunnerConfig.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\AvokaSeleniumRunner.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/SeleniumRunner.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\FirefoxChromeLauncher.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/firefoxlauncher/FirefoxChromeLauncher.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\SeleniumPoller.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/util/SeleniumPoller.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\AvokaBrowserLauncher.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/BrowserLauncher.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\UserPref.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/firefoxlauncher/UserPref.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\AvokaWindowsIEBrowserLauncher.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/WindowsIEBrowserLauncher.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\Profile.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/firefoxlauncher/Profile.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\test\com\avoka\selenium\runner\AvokaFirefoxChromeLauncherTest.java" afterPath="$PROJECT_DIR$/vendor/test/com/prabindeka/selenium/runner/AvokaFirefoxChromeLauncherTest.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\AvokaFirefoxChromeLauncher.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/FirefoxChromeLauncher.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\firefoxlauncher\Context.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/firefoxlauncher/Context.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\SeleniumInitializer.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/util/SeleniumInitializer.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\UrlPoller.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/util/UrlPoller.java" />
+      <change type="MOVED" beforePath="C:\dev\selenium-core-example\selenium-core-example\vendor\utilities\com\avoka\selenium\runner\util\ResponseEvaluator.java" afterPath="$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/util/ResponseEvaluator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
     </list>
     <ignored path="telstra.all4biz.portal.iws" />
@@ -79,7 +94,16 @@
       <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="19" selection-start="2928" selection-end="2928" vertical-scroll-proportion="0.6494845">
+            <state line="40" column="72" selection-start="1944" selection-end="1944" vertical-scroll-proportion="0.401766">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeleniumRunner.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/SeleniumRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,9 +164,9 @@
         </entry>
       </file>
       <file leaf-file-name="FirefoxChromeLauncher.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/utilities/com/avoka/selenium/runner/firefoxlauncher/FirefoxChromeLauncher.java">
+        <entry file="file://$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/firefoxlauncher/FirefoxChromeLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="39" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+            <state line="17" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -208,11 +232,11 @@
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="0.5" version="1" splitterProportion="0.5">
-      <flattenPackages />
+      <flattenPackages ProjectPane="false" />
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
       <showStructure ProjectPane="false" />
       <autoscrollToSource />
@@ -784,7 +808,7 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950467" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270142" sideWeight="0.5" order="11" side_tool="false" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32927817" sideWeight="0.6338863" order="2" side_tool="false" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32927817" sideWeight="0.6338863" order="2" side_tool="false" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992891" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46347943" sideWeight="0.5" order="5" side_tool="false" x="24" y="510" width="1393" height="309" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" />
@@ -974,9 +998,9 @@
         <state line="6" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/utilities/com/avoka/selenium/runner/firefoxlauncher/FirefoxChromeLauncher.java">
+    <entry file="file://$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/firefoxlauncher/FirefoxChromeLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+        <state line="17" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -995,9 +1019,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/utilities/com/prabindeka/selenium/runner/SeleniumRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="19" selection-start="2928" selection-end="2928" vertical-scroll-proportion="0.6494845">
+        <state line="40" column="72" selection-start="1944" selection-end="1944" vertical-scroll-proportion="0.401766">
           <folding />
         </state>
       </provider>

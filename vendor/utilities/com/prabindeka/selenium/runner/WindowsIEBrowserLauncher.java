@@ -1,12 +1,12 @@
-package com.avoka.selenium.runner;
+package com.prabindeka.selenium.runner;
 
 import com.jacob.activeX.ActiveXComponent;
 import com.jacob.com.Dispatch;
 import com.jacob.com.Variant;
 
 
-public class AvokaWindowsIEBrowserLauncher implements AvokaBrowserLauncher {
-    public AvokaWindowsIEBrowserLauncher() {
+public class WindowsIEBrowserLauncher implements BrowserLauncher {
+    public WindowsIEBrowserLauncher() {
     }
 
     public void launch(String url, boolean visible) {

@@ -1,4 +1,4 @@
-package com.avoka.selenium.runner.firefoxlauncher;
+package com.prabindeka.selenium.runner.firefoxlauncher;
 
 import java.io.BufferedReader;
 import java.io.File;

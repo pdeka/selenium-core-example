@@ -1,4 +1,4 @@
-package com.avoka.selenium.runner.util;
+package com.prabindeka.selenium.runner.util;
 
 import org.apache.commons.httpclient.methods.GetMethod;
 

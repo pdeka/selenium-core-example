@@ -1,15 +1,15 @@
-package com.avoka.selenium.runner;
+package com.prabindeka.selenium.runner;
 
-import com.avoka.selenium.runner.util.*;
+import com.prabindeka.selenium.runner.util.*;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
 
 
-public class AvokaSeleniumRunner {
+public class SeleniumRunner {
 
-    public AvokaSeleniumRunner(SeleniumRunnerConfig initalConfig) {
+    public SeleniumRunner(SeleniumRunnerConfig initalConfig) {
         config = initalConfig;
     }
 
@@ -29,21 +29,21 @@ public class AvokaSeleniumRunner {
 
         if ("firefox-chrome".equalsIgnoreCase(browserType)) {
             String firefoxExe = properties.getProperty("test.firefox.exe.location");
-            config.setBrowserLauncher(new AvokaFirefoxChromeLauncher(firefoxExe));
+            config.setBrowserLauncher(new FirefoxChromeLauncher(firefoxExe));
         } else if ("ie".equalsIgnoreCase(browserType)) {
-            config.setBrowserLauncher(new AvokaWindowsIEBrowserLauncher());
+            config.setBrowserLauncher(new WindowsIEBrowserLauncher());
         } else {
             throw new RuntimeException("Not a valid browser. Please set test.selenium.browser= ie or firefox");
         }
 
-        (new AvokaSeleniumRunner(config)).run();
+        (new SeleniumRunner(config)).run();
     }
 
     public void run() throws IOException, InterruptedException {
         String resultsURL = config.getResultsURL();
         System.out.println("Results URL - " + resultsURL);
         boolean isBrowserVisible = config.isBrowserVisible();
-        AvokaBrowserLauncher browserLauncher = config.getBrowserLauncher();
+        BrowserLauncher browserLauncher = config.getBrowserLauncher();
         (new SeleniumInitializer(resultsURL)).initialize();
         System.out.println("config.getTestRunnerURL() - " + config.getTestRunnerURL());
         System.out.println("isBrowserVisible - " + isBrowserVisible);

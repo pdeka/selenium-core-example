@@ -1,6 +1,6 @@
-package com.avoka.selenium.runner.util;
+package com.prabindeka.selenium.runner.util;
 
-import com.avoka.selenium.runner.AvokaBrowserLauncher;
+import com.prabindeka.selenium.runner.BrowserLauncher;
 
 import java.io.File;
 
@@ -11,12 +11,12 @@ public class SeleniumRunnerConfig
     {
     }
 
-    public AvokaBrowserLauncher getBrowserLauncher()
+    public BrowserLauncher getBrowserLauncher()
     {
         return browserLauncher;
     }
 
-    public void setBrowserLauncher(AvokaBrowserLauncher browserLauncher)
+    public void setBrowserLauncher(BrowserLauncher browserLauncher)
     {
         this.browserLauncher = browserLauncher;
     }
@@ -84,6 +84,6 @@ public class SeleniumRunnerConfig
     private String resultsURL, testRunnerURL, jacobDirectory;
     private boolean isBrowserVisible;
     private File outputFile;
-    private AvokaBrowserLauncher browserLauncher;
+    private BrowserLauncher browserLauncher;
     private int maxPollAttempts;
 }

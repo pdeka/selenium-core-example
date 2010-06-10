@@ -1,6 +1,6 @@
-package com.avoka.selenium.runner;
+package com.prabindeka.selenium.runner;
 
-public interface AvokaBrowserLauncher {
+public interface BrowserLauncher {
     public void launch(String url, boolean visible);
 
     public void close();

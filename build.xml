@@ -9,16 +9,14 @@
     <property name="test.coverage.dir" value="${basedir}/output/tests-coverage"/>
     <property name="output.dir" value="${basedir}/output"/>
     <property name="build.compile.debug" value="true"/>
-    <property name="build.compile.deprecation" value="false"/>
+    <property name="build.compile.deprecation" value="true"/>
     <property name="src.main" value="src"/>
-    <property name="src.web" value="WebRoot"/>
-    <property name="src.test.java" value="junit"/>
+    <property name="src.web" value="webroot"/>
+    <property name="src.test.java" value="test"/>
     <property name="src.test.web" value="functional-tests"/>
     <property name="src.test.web.development" value="functional-tests/tests/development"/>
     <property name="lib.dir" value="lib"/>
     <property name="lib.build" value="${lib.dir}/build"/>
-    <property name="lib.main" value="${lib.dir}/source"/>
-    <property name="lib.test" value="${lib.dir}/test"/>
     <property name="build.dir" value="build"/>
     <property name="build.web.dir" value="${build.dir}/web"/>
     <property name="test.dir" value="build/test"/>
@@ -26,8 +24,6 @@
     <property name="ruby.selenium.tests.dir" value="${test.dir}/web/ruby-selenium-tests"/>
     <property name="selenium.url" value="http://${server.name}:${server.port}/selenium"/>
     <property name="tomcat.home" value="${basedir}/apache-tomcat-6.0.24"/>
-    <property name="project.deploy.dir" value="${build.dir}/deploy/all4biz"/>
-    <property name="build.deploy.classes" value="${project.deploy.dir}/WEB-INF/classes"/>
 
     <path id="utilities.compile.classpath">
         <pathelement location="${utilities.java.classes}"/>
@@ -37,7 +33,6 @@
     <path id="utilities.class.path">
         <pathelement location="${utilities.java.classes}"/>
         <fileset dir="vendor/selenium" includes="**/*.jar"/>
-        <pathelement location="${build.deploy.classes}"/>
     </path>
 
     <path id="cobertura.classpath">
@@ -52,58 +47,25 @@
         </classpath>
     </taskdef>
 
-    <!-- Top level targets -->
-
     <target name="all"
-            depends="check-tomcat-is-running, clean, init, build-all, initialize-db, run-unit-tests,
-            utilities-compile, generate-deploy-tests, run-functional-tests"
+            depends="check-tomcat-is-running, clean, init, build-all, run-unit-tests, clean-initialize-db,
+            utilities-compile, generate-deploy-tests, run-functional-tests, create-coverage-report"
             description="Main target which builds everything and runs all tests"/>
 
-    <target name="generate-deploy-tests" depends="init, generate-functional-tests"
-            description="Build and deploy selenium tests">
-        <copy todir="${tomcat.home}/webapps/selenium-tests">
-            <fileset dir="${gen.test.web}" includes="**/*.html"/>
-        </copy>
+    <target name="check-tomcat-is-running">
+        <echo>Server port ${server.port}</echo>
+        <waitfor maxwait="100" maxwaitunit="millisecond" timeoutproperty="tomcat.stopped">
+            <http url="http://localhost:${server.port}/"/>
+        </waitfor>
+
+        <fail unless="tomcat.stopped">Tomcat is already running.</fail>
     </target>
 
-    <target name="build-all"/>
-
-    <target name="run-functional-tests"
-            depends="start-tomcat,  run-selenium-tests, stop-tomcat"/>
-
-    <target name="hotdeploy-resources" description="Hot deploy all resources and properties">
-        <copy todir="${project.deploy.dir}">
-            <fileset dir="${src.web}">
-                <exclude name="**/*.war"/>
-                <exclude name="**/*formcenterMap.map.xml"/>
-            </fileset>
-        </copy>
-        <copy todir="${build.deploy.classes}">
-            <fileset dir="${basedir}/config">
-                <include name="*.xml"/>
-                <include name="*.properties"/>
-                <exclude name="**/*formcenterMap.map.xml"/>
-            </fileset>
-        </copy>
-
-        <copy todir="${build.deploy.classes}" filtering="true" overwrite="true">
-            <fileset dir="config/development">
-                <include name="*.xml"/>
-            </fileset>
-            <filterset filtersfile="build.${env}.properties"/>
-        </copy>
-    </target>
-
-    <target name="build-all4biz"/>
-
-    <target name="clean" depends="clean-output">
+    <target name="clean">
         <delete dir="${build.dir}"/>
         <delete dir="${tomcat.home}/webapps/selenium"/>
         <delete dir="${tomcat.home}/webapps/selenium-tests"/>
         <delete dir="${tomcat.home}/work/Catalina/localhost"/>
-    </target>
-
-    <target name="clean-output">
         <delete dir="${output.dir}/dist"/>
         <delete dir="${output.dir}/selenium"/>
         <delete dir="${output.dir}/unit-tests"/>
@@ -112,39 +74,44 @@
     <target name="init">
         <mkdir dir="${basedir}/output"/>
         <mkdir dir="${build.dir}"/>
-        <mkdir dir="${build.deploy.classes}"/>
         <mkdir dir="${build.web.dir}"/>
-        <mkdir dir="${project.deploy.dir}"/>
-
         <mkdir dir="${test.dir}"/>
         <mkdir dir="${gen.test.web}"/>
         <mkdir dir="${ruby.selenium.tests.dir}"/>
-
         <mkdir dir="${selenium.output.dir}"/>
-
         <mkdir dir="${utilities.java.classes}"/>
     </target>
 
+    <target name="build-all" description="Build production classes and unit tests"/>
 
-    <target name="utilities-compile" depends="build-all4biz">
+    <target name="run-unit-tests"/>
+
+    <target name="clean-initialize-db" description="Clean database and initialize for the functional tests to run"/>
+
+    <target name="utilities-compile">
         <compile classpathref="utilities.compile.classpath" src="${basedir}/vendor/utilities"
                  destDir="${utilities.java.classes}"/>
     </target>
 
-    <target name="run-unit-tests"/>
-
-    <!--<target name="create-coverage-report" depends="init" if="instrument">-->
-        <!--<cobertura-report format="xml" datafile="cobertura.ser" destdir="${test.coverage.dir}" srcdir="${src.main}"/>-->
-    <!--</target>-->
-
-    <target name="check-tomcat-is-running">
-        <echo>Server port ${server.port}</echo>
-        <waitfor maxwait="100" maxwaitunit="millisecond" timeoutproperty="tomcat.stopped">
-            <http url="http://localhost:${server.port}/all4biz/"/>
-        </waitfor>
-
-        <fail unless="tomcat.stopped">Tomcat is already running.</fail>
+    <target name="generate-deploy-tests" depends="init, generate-functional-tests"
+            description="Build and deploy selenium tests">
+        <copy todir="${tomcat.home}/webapps/selenium-tests">
+            <fileset dir="${gen.test.web}" includes="**/*.html"/>
+        </copy>
     </target>
+
+    <target name="run-functional-tests" depends="start-tomcat,  run-selenium-tests, stop-tomcat"/>
+
+
+    <!--I don't have src code right now. But I still felt this target needs would be of value to the devs. You have -->
+    <!--to get instrumentation over your source code to be able to get a coverage report.-->
+
+    <target name="create-coverage-report" depends="init" if="instrument">
+        <!--<cobertura-report format="xml" datafile="cobertura.ser" destdir="${test.coverage.dir}" srcdir="${src.main}"/>-->
+    </target>
+
+
+    <!--The rest are worker targets called by the top level targets-->
 
     <target name="generate-functional-tests" depends="init">
         <generate-selenium-test-suite>
@@ -153,21 +120,6 @@
             </tests>
         </generate-selenium-test-suite>
     </target>
-
-    <macrodef name="generate-selenium-test-suite">
-        <element name="tests"/>
-        <sequential>
-            <delete>
-                <fileset dir="${ruby.selenium.tests.dir}" includes="*.test"/>
-            </delete>
-            <copy todir="${ruby.selenium.tests.dir}">
-                <tests/>
-            </copy>
-            <exec dir="${src.test.web}" executable="ruby">
-                <arg line="generate_all_tests.rb"/>
-            </exec>
-        </sequential>
-    </macrodef>
 
     <target name="start-tomcat" depends="init">
         <parallel timeout="120000">
@@ -184,7 +136,7 @@
 
     <target name="run-selenium-tests">
         <delete file="${selenium.output.dir}/selenium-results.html"/>
-        <java classname="com.avoka.selenium.runner.AvokaSeleniumRunner" fork="true" failonerror="true">
+        <java classname="com.prabindeka.selenium.runner.SeleniumRunner" fork="true" failonerror="true">
             <classpath refid="utilities.class.path"/>
             <sysproperty key="test.selenium.log.dir" value="${selenium.output.dir}"/>
             <sysproperty key="test.selenium.results" value="${selenium.url}/postResults"/>
@@ -199,8 +151,20 @@
 
     </target>
 
-    <target name="initialize-db"
-            description="Initialize all4biz database"/>
+    <macrodef name="generate-selenium-test-suite">
+        <element name="tests"/>
+        <sequential>
+            <delete>
+                <fileset dir="${ruby.selenium.tests.dir}" includes="*.test"/>
+            </delete>
+            <copy todir="${ruby.selenium.tests.dir}">
+                <tests/>
+            </copy>
+            <exec dir="${src.test.web}" executable="ruby">
+                <arg line="generate_all_tests.rb"/>
+            </exec>
+        </sequential>
+    </macrodef>
 
     <macrodef name="tomcat-launcher">
         <sequential>

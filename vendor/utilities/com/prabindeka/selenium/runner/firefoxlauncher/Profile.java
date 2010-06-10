@@ -1,4 +1,4 @@
-package com.avoka.selenium.runner.firefoxlauncher;
+package com.prabindeka.selenium.runner.firefoxlauncher;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
