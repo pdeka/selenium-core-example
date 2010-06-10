@@ -3,6 +3,7 @@
 <project name="selenium-core-example" default="all" basedir=".">
 
     <property file="${basedir}/build.${env}.properties"/>
+
     <property name="utilities.java.classes" value="${basedir}/build/utilities-java-classes"/>
     <property name="selenium.output.dir" value="${basedir}/output/selenium"/>
     <property name="test.coverage.dir" value="${basedir}/output/tests-coverage"/>
@@ -23,9 +24,7 @@
     <property name="test.dir" value="build/test"/>
     <property name="gen.test.web" value="${test.dir}/web"/>
     <property name="ruby.selenium.tests.dir" value="${test.dir}/web/ruby-selenium-tests"/>
-    <property name="server.url" value="http://${server-name}:${server.port}"/>
-    <property name="firefox.exe.location" value="${firefox-exe-location}"/>
-    <property name="selenium.url" value="${server.url}/selenium"/>
+    <property name="selenium.url" value="http://${server.name}:${server.port}/selenium"/>
     <property name="tomcat.home" value="${basedir}/apache-tomcat-6.0.24"/>
     <property name="project.deploy.dir" value="${build.dir}/deploy/all4biz"/>
     <property name="build.deploy.classes" value="${project.deploy.dir}/WEB-INF/classes"/>
@@ -191,7 +190,6 @@
             <sysproperty key="test.selenium.results" value="${selenium.url}/postResults"/>
             <sysproperty key="test.selenium.browser" value="firefox-chrome"/>
             <sysproperty key="test.firefox.exe.location" value="${firefox.exe.location}"/>
-            <!--<sysproperty key="test.firefox.profile.name" value="${firefox.profile.name}"/>-->
             <sysproperty key="test.selenium.runner"
                          value="${selenium.url}/TestRunner.html?test=/selenium-tests/TestSuite.html&amp;auto=true&amp;resultsUrl=${selenium.url}/postResults"/>
             <sysproperty key="test.selenium.browser.visible" value="true"/>
